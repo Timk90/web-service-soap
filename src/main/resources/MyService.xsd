@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.servicesoapex.com/ourservice" 
+xmlns:tns="http://www.servicesoapex.com/ourservice" elementFormDefault="qualified">
+  
+  <xs:element name="ServiceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="number" type="xs:int" maxOccurs="1" minOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:element name="ServiceResponse"> 
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Myresult" type="tns:Myresult" maxOccurs="1" minOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:complexType name="Myresult">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="fileNames" type="xs:string"/>
+      <xs:element name="error" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ 
+</xs:schema>
